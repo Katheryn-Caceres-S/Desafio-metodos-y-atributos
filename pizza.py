@@ -1,25 +1,28 @@
 class Pizza:
-
+    #parametros fijos
     precio = 10000
     tamaño = "familiar"
 
+    # tipos de masas
     tipo_masa = {
         1: "tradicional",
         2: "delgada"
     }
 
+    #tipos de vegetales
     ingredientes_vegetales = {
         1: "tomate",
         2: "aceitunas",
         3: "champiñones"
     }
-
+    #opciones de ingredientes proteicos
     ingredientes_proteicos = {
         1: "pollo",
         2: "carne",
         3: "carne vegetal"
     }
 
+    #constructor
     def __init__(self):
         self.ingrediente_proteico = None
         self.ingredientes_vegetales_seleccionados = []
@@ -40,7 +43,7 @@ class Pizza:
         except (ValueError, KeyError):
             proteico = None
 
-        print("\nMenú de ingredientes vegetales:")
+        print("Menú de ingredientes vegetales:")
         for key, val in Pizza.ingredientes_vegetales.items():
             print(f"{key}. {val}")
         try:
@@ -51,7 +54,7 @@ class Pizza:
         except (ValueError, KeyError):
             vegetal1, vegetal2 = None, None
 
-        print("\nTipos de masa disponibles:")
+        print("Tipos de masa disponibles:")
         for key, val in Pizza.tipo_masa.items():
             print(f"{key}. {val}")
         try:

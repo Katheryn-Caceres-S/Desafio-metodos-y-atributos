@@ -14,14 +14,14 @@ mi_pizza = Pizza()
 mi_pizza.realizar_pedido()
 
 # d. Mostrar resumen del pedido
-print("\nResumen del pedido:")
+print("Resumen del pedido:")
 print("Ingrediente proteico:", mi_pizza.ingrediente_proteico)
 print("Ingredientes vegetales:", mi_pizza.ingredientes_vegetales_seleccionados)
 print("Tipo de masa:", mi_pizza.tipo_masa)
 print("¿Pizza válida?:", mi_pizza.valida)
 
 # e. Intentar mostrar atributo de instancia desde la clase (provocará error controlado)
-print("\nPrueba de acceso inválido al atributo 'valida' desde la clase (debe generar error):")
+print("Prueba de acceso inválido al atributo 'valida' desde la clase (debe generar error):")
 try:
     print(Pizza.valida)
 except AttributeError:
